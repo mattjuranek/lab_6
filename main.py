@@ -19,18 +19,18 @@ def encode(original_password):
 
 def decode(encoded_password):
     decoded_password = ''
-      for digit in encoded_password:
+    for digit in encoded_password:
         if int(digit) < 3:
-          if digit == '2':
-            decoded_password += '9'
-          if digit == '1':
-            decoded_password += '8'
-          if digit == '0'
-            decoded_password += '7'
+            if digit == '2':
+                decoded_password += '9'
+            if digit == '1':
+                decoded_password += '8'
+            if digit == '0':
+                decoded_password += '7'
         else:
           digit = int(digit) - 3
           decoded_password += str(digit)
-  return decoded_password
+    return decoded_password
 
 def main():
     while True:
