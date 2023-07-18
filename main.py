@@ -17,7 +17,20 @@ def encode(original_password):
         encoded_password += str(new_digit)
     return encoded_password
 
-
+def decode(encoded_password):
+  decoded_password = ''
+  for digit in encoded_password:
+    if int(digit) < 3:
+      if digit == '2':
+        decoded_password += '9'
+      if digit == '1':
+        decoded_password += '8'
+      if digit == '0'
+        decoded_password += '7'
+    else:
+      digit = int(digit) - 3
+      decoded_password += str(digit)
+  return decoded_password
 
 def main():
     while True:
@@ -28,6 +41,7 @@ def main():
             encoded_password = encode(original_password)
             print("Your password has been encoded and stored!\n")
         elif option == 2:
+            print('The encoded password is', encoded_password, 'and the original password is', decode(encoded_password) + '.')
             pass
         elif option == 3:
             break
